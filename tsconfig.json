@@ -1,8 +1,16 @@
 {
   "extends": "@react-native/typescript-config",
-  "compilerOptions": {
-    "types": ["jest"],
-  },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["**/node_modules", "**/Pods"]
+  "include": [
+    "*.js",
+    "**/*.js",
+    "**/*.mjs",
+    "**/*.ts",
+    "**/*.tsx",
+    "eslint.config.mjs",
+    ".prettierrc.js"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/Pods"
+  ]
 }
