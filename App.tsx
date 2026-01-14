@@ -1,43 +1,17 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import {PersistGate} from 'redux-persist/integration/react';
+import {Provider} from 'react-redux';
+import React from 'react';
+import {Text} from 'react-native-paper';
 
-import {
-	SafeAreaProvider,
-	useSafeAreaInsets,
-} from 'react-native-safe-area-context';
-import {StatusBar, StyleSheet, View, useColorScheme} from 'react-native';
-import {NewAppScreen} from '@react-native/new-app-screen';
+import {persistor, store} from './src/redux/store';
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-	},
-});
-
-function AppContent() {
-	const safeAreaInsets = useSafeAreaInsets();
-
-	return (
-		<View style={styles.container}>
-			<NewAppScreen
-				templateFileName="App.tsx"
-				safeAreaInsets={safeAreaInsets}
-			/>
-		</View>
-	);
-}
 function App() {
-	const isDarkMode = useColorScheme() === 'dark';
-
 	return (
-		<SafeAreaProvider>
-			<StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-			<AppContent />
-		</SafeAreaProvider>
+		<Provider store={store}>
+			<PersistGate loading={null} persistor={persistor}>
+				<Text>Hello World!</Text>
+			</PersistGate>
+		</Provider>
 	);
 }
 
