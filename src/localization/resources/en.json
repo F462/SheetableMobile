@@ -1,1 +1,10 @@
-{}
+{
+	"appTheme": "App theme",
+	"appThemeValues": {
+		"dark": "Dark",
+		"dark_oled": "Dark OLED",
+		"light": "Light",
+		"system": "System"
+	},
+	"displayTitle": "Display"
+}

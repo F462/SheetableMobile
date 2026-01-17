@@ -8,13 +8,16 @@ i18n;
 
 import {persistor, store} from './src/redux/store';
 import {RootNavigator} from 'src/navigation/components/RootNavigator';
+import {ThemeProvider} from 'src/theming/components/ThemeProvider';
 
 function App() {
 	return (
 		<Provider store={store}>
-			<PersistGate loading={null} persistor={persistor}>
-				<RootNavigator />
-			</PersistGate>
+			<ThemeProvider>
+				<PersistGate loading={null} persistor={persistor}>
+					<RootNavigator />
+				</PersistGate>
+			</ThemeProvider>
 		</Provider>
 	);
 }
