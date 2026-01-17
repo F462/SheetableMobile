@@ -19,12 +19,16 @@ import {
 import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+import {settingsReducer} from 'src/features/settings/context/settingsSlice';
+
 const persistConfig = {
 	key: 'root',
 	storage: AsyncStorage,
 };
 
-const appReducer = combineReducers({});
+const appReducer = combineReducers({
+	settings: settingsReducer,
+});
 
 const persistedReducer = persistReducer(persistConfig, appReducer);
 
