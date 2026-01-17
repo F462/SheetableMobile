@@ -3459,6 +3459,7 @@ __metadata:
     react-redux: "npm:^9.2.0"
     react-test-renderer: "npm:19.2.0"
     redux-persist: "npm:^6.0.0"
+    src: "link:./src"
     ts-jest: "npm:^29.4.6"
     typescript: "npm:^5.8.3"
   languageName: unknown
@@ -9460,6 +9461,12 @@ __metadata:
   checksum: 10c0/ecadcfe4c771890140da5023d43e190b7566d9cf8b2d238600f31bec0fc653f328da4450eb04bd59a431771a8e9cc0e118f0aa3974b683a4981b4e07abc2a5bb
   languageName: node
   linkType: hard
+
+"src@link:./src::locator=SheetableMobile%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "src@link:./src::locator=SheetableMobile%40workspace%3A."
+  languageName: node
+  linkType: soft
 
 "ssri@npm:^13.0.0":
   version: 13.0.0
