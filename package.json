@@ -9,7 +9,7 @@
 		"start": "react-native start",
 		"test": "jest",
 		"typecheck": "tsc -p .",
-		"verify": "yarn typecheck && yarn lint && yarn depcyclecheck && yarn test",
+		"verify": "concurrently --names \"typecheck,lint,depcycle,test\" --prefix-colors \"blue,green,yellow,magenta\" --kill-others-on-fail \"yarn typecheck\" \"yarn lint\" \"yarn depcyclecheck\" \"yarn test\"",
 		"depcyclecheck": "dpdm index.js --transform --circular --exit-code circular:1 --warning=false --no-tree"
 	},
 	"dependencies": {
@@ -39,6 +39,7 @@
 		"@types/jest": "^29.5.13",
 		"@types/react": "^19.2.0",
 		"@types/react-test-renderer": "^19.1.0",
+		"concurrently": "^9.2.1",
 		"dpdm": "^3.14.0",
 		"eslint": "^9.39.2",
 		"eslint-config-prettier": "^10.1.8",
