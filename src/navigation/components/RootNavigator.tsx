@@ -22,7 +22,10 @@ export const RootNavigator = () => {
 	return (
 		<SafeAreaView style={styles.container}>
 			<NavigationContainer theme={theme}>
-				<Stack.Navigator>
+				<Stack.Navigator
+					screenOptions={{
+						headerShown: false,
+					}}>
 					<Stack.Screen
 						name="Home"
 						component={TabNavigator}
