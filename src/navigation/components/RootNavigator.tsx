@@ -1,5 +1,6 @@
 import React from 'react';
 
+import BootSplash from 'react-native-bootsplash';
 import {NavigationContainer} from '@react-navigation/native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {StyleSheet} from 'react-native';
@@ -21,7 +22,11 @@ export const RootNavigator = () => {
 
 	return (
 		<SafeAreaView style={styles.container}>
-			<NavigationContainer theme={theme}>
+			<NavigationContainer
+				theme={theme}
+				onReady={() => {
+					BootSplash.hide({fade: true}).catch(console.error);
+				}}>
 				<Stack.Navigator
 					screenOptions={{
 						headerShown: false,
