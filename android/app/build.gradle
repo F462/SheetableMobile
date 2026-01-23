@@ -81,9 +81,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.sheetablemobile"
+    namespace "com.github.f462.sheetablemobile"
     defaultConfig {
-        applicationId "com.sheetablemobile"
+        applicationId "com.github.f462.sheetablemobile"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

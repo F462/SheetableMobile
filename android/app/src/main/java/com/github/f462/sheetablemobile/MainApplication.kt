@@ -1,4 +1,4 @@
-package com.sheetablemobile
+package com.github.f462.sheetablemobile
 
 import android.app.Application
 import com.facebook.react.PackageList

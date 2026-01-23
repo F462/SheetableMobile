@@ -1,4 +1,4 @@
-package com.sheetablemobile
+package com.github.f462.sheetablemobile
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
