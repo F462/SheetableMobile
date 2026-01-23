@@ -7,7 +7,10 @@ import {StyleSheet} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useTheme} from 'react-native-paper';
 
+import {AccountScreen} from 'src/features/account/components/AccountScreen';
 import {TabNavigator} from './TabNavigator';
+import {selectIsUserLoggedIn} from 'src/features/account/context/accountSelectors';
+import {useAppSelector} from 'src/features/data/context/store';
 
 const styles = StyleSheet.create({
 	container: {
@@ -20,6 +23,8 @@ const Stack = createNativeStackNavigator();
 export const RootNavigator = () => {
 	const theme = useTheme<any>();
 
+	const isUserLoggedIn = useAppSelector(selectIsUserLoggedIn);
+
 	return (
 		<SafeAreaView style={styles.container}>
 			<NavigationContainer
@@ -31,11 +36,10 @@ export const RootNavigator = () => {
 					screenOptions={{
 						headerShown: false,
 					}}>
-					<Stack.Screen
-						name="Home"
-						component={TabNavigator}
-						options={{headerShown: false}}
-					/>
+					{isUserLoggedIn ? null : (
+						<Stack.Screen name="Account" component={AccountScreen} />
+					)}
+					<Stack.Screen name="Home" component={TabNavigator} />
 				</Stack.Navigator>
 			</NavigationContainer>
 		</SafeAreaView>

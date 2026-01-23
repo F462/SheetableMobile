@@ -6,5 +6,9 @@
 		"light": "Light",
 		"system": "System"
 	},
-	"displayTitle": "Display"
+	"displayTitle": "Display",
+	"enterEmail": "Enter e-mail address:",
+	"enterPassword": "Enter password:",
+	"enterServerUrl": "Enter Server URL:",
+	"save": "Save"
 }

@@ -1,6 +1,6 @@
 import {createSelector} from '@reduxjs/toolkit';
 
-import {RootState} from 'src/redux/store';
+import {RootState} from 'src/features/data/context/store';
 
 const selectSettingsState = (state: RootState) => state.settings;
 

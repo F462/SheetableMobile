@@ -4225,6 +4225,7 @@ __metadata:
     react-i18next: "npm:^16.5.3"
     react-native: "npm:0.83.1"
     react-native-bootsplash: "npm:^7.0.0"
+    react-native-encrypted-storage: "npm:^4.0.3"
     react-native-localize: "npm:^3.6.1"
     react-native-paper: "npm:^5.14.5"
     react-native-safe-area-context: "npm:^5.6.2"
@@ -9939,6 +9940,16 @@ __metadata:
   bin:
     react-native-bootsplash: cli.js
   checksum: 10c0/0a4a23f3e0e740287e2147e5c9d305821bf9d020ca574a8d3320cca489c90ebd3c83356f0e918a42244abefbcf50e75ebca45d463b9ca959222622f416dbd6cb
+  languageName: node
+  linkType: hard
+
+"react-native-encrypted-storage@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "react-native-encrypted-storage@npm:4.0.3"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/98de9250a406c5ce21607233a63dcffa727b00d69992825c9b81cb1978c884d0c3fc688811cb515a5628ecf67c5804c1c00047599f34b2591b89447263c4d7cc
   languageName: node
   linkType: hard
 

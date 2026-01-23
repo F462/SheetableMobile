@@ -19,6 +19,8 @@ import {
 import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+import {accountReducer} from 'src/features/account/context/accountSlice';
+import {appStateReducer} from 'src/features/appState/context/appStateSlice';
 import {settingsReducer} from 'src/features/settings/context/settingsSlice';
 
 const persistConfig = {
@@ -27,6 +29,8 @@ const persistConfig = {
 };
 
 const appReducer = combineReducers({
+	account: accountReducer,
+	appState: appStateReducer,
 	settings: settingsReducer,
 });
 

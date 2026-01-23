@@ -4,7 +4,7 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import {useTranslation} from 'react-i18next';
 
-import {useAppDispatch, useAppSelector} from 'src/redux/store';
+import {useAppDispatch, useAppSelector} from 'src/features/data/context/store';
 import {AppTheme} from '../types';
 import {BaseScreen} from 'src/ui/BaseScreen';
 import {appThemeSet} from '../context/settingsSlice';

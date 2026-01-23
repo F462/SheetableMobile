@@ -17,6 +17,13 @@ jest.mock('react-native-localize', () => ({
 	findBestLanguageTag: jest.fn()
 }));
 
+jest.mock('react-native-encrypted-storage', () => ({
+	setItem: jest.fn(() => Promise.resolve()),
+	getItem: jest.fn(() => Promise.resolve(null)),
+	removeItem: jest.fn(() => Promise.resolve()),
+	clear: jest.fn(() => Promise.resolve())
+}));
+
 jest.mock('react-native-bootsplash', () => {
 	return {
 		hide: jest.fn().mockResolvedValue(),

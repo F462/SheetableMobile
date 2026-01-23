@@ -11,7 +11,7 @@ import deepmerge from 'deepmerge';
 
 import {AppTheme} from 'src/features/settings/types';
 import {selectAppTheme} from 'src/features/settings/context/settingsSelectors';
-import {useAppSelector} from 'src/redux/store';
+import {useAppSelector} from 'src/features/data/context/store';
 
 const {LightTheme: navigationLightTheme, DarkTheme: navigationDarkTheme} =
 	adaptNavigationTheme({
